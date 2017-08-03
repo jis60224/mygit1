@@ -1,1 +1,6 @@
-还有谁？？？
+git init : 初始化一个本地仓库
+git add ： 添加到本地仓库（暂存区）
+git commit -m "" : 提交到本地仓库
+git remote add origin  远程仓库地址: 关联远程仓库
+git push -u origin master : 将本地仓库的内容推送到远程仓库
+git pull orgin master: 将远程仓库的内容更新到本地仓库
