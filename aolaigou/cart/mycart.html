@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<style>
+			ul, li{list-style: none;}
+			img {width: 40px; height: 30px;}
+			.num {width: 30px; text-align: center;}
+		</style>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//获取cookie中的购物车数据
+				reflesh()
+				function reflesh(){
+					var arr = $.cookie('cart');
+					if(arr){
+						arr = JSON.parse(arr);
+						//清空旧节点
+						$('#list').empty();
+						if(arr.length >0){
+							
+							var total = 0;
+
+							//添加节点
+							console.log(arr)
+							for(var i in arr){
+								var obj = arr[i];
+								var li = $('<li></li>').appendTo('#list');
+								if(obj.checked){
+									$('<input class="check" type="checkbox" checked="checked"/>').appendTo(li);
+								}else{
+									$('<input class="check" type="checkbox" />').appendTo(li);
+								}
+	
+								$('<img src="../'+obj.img+'" />').appendTo(li);
+								$('<span>'+obj.name+'</span>').appendTo(li);
+								$('<span>'+obj.unite+obj.price+'</span>').appendTo(li);
+								$('<input class="sub" type="button" value="-" />').appendTo(li);
+								$('<input class="num" type="text" value="'+obj.num+'" />').appendTo(li);
+								$('<input class="add" type="button" value="+" />').appendTo(li);
+								$('<a class="delete" href="javascript:;">删除</a>').appendTo(li);
+								//如果选中就加上价格
+								if(obj.checked){
+									total += obj.price * obj.num;
+								}
+							}
+							
+							//显示总价
+							$('#totalPrice').html(total);
+						}else{
+							$('#totalPrice').html(0);
+							console.log('购物车中没商品？')
+						}
+					}else{
+						console.log('购物车空空如也？')
+					}
+				}
+				
+				//各种操作
+				//删除
+				$('#list').on('click','.delete',function(){
+					
+					var index = $(this).index('#list .delete');
+					var arr = JSON.parse($.cookie('cart'));
+					arr.splice(index,1);
+					$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
+					
+					isAllCheck(); //是否全选了
+					reflesh();
+					//console.log($.cookie())
+				})
+				//加
+				$('#list').on('click','.add',function(){
+					var index = $(this).index('#list .add');
+					var arr = JSON.parse($.cookie('cart'));
+					arr[index].num++;
+					$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
+					
+					reflesh();
+				})
+				//减
+				$('#list').on('click','.sub',function(){
+					var index = $(this).index('#list .sub');
+					var arr = JSON.parse($.cookie('cart'));
+					console.log(arr[index])
+					arr[index].num--;
+					if(arr[index].num <=1){
+						arr[index].num = 1;
+					}
+					$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
+					
+					reflesh();
+				})
+				//勾选
+				$('#list').on('click','.check',function(){
+					var index = $(this).index('#list .check');
+					var arr = JSON.parse($.cookie('cart'));
+					arr[index].checked = !arr[index].checked;
+					$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
+					
+					isAllCheck();
+					reflesh();
+				})
+				
+				//点击全选
+				$('#allCheck').click(function(){
+					var arr = JSON.parse($.cookie('cart'));
+					for(var i in arr){
+						if($(this).prop('checked')){
+							arr[i].checked = true;
+						}else{
+							arr[i].checked = false;
+						}
+					}
+					$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
+					
+					reflesh();
+				})
+				
+				//判断是否全选
+				isAllCheck();
+				function isAllCheck(){
+					var arr = JSON.parse($.cookie('cart'));
+					var sum = 0;
+					for(var i in arr){
+						sum += arr[i].checked;
+					}
+					if(sum == arr.length && arr.length!=0){
+						$('#allCheck').prop('checked',true);
+					}
+					else{
+						$('#allCheck').prop('checked',false);
+					}
+				}
+				
+				//删除选中
+				$('#deleteSelect').click(function(){
+					
+					var arr = JSON.parse($.cookie('cart'));
+					var newArr = [];
+					for(var i in arr){
+						if(arr[i].checked == false){
+							newArr.push(arr[i]);
+						}
+					}
+					$.cookie('cart',json.stringify(newArr),{expires:10,path:'/'});
+					
+					isAllCheck();
+					reflesh();
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<h2>我的购物车</h2>
+		
+		全选<input type="checkbox" checked="checked" id="allCheck" />
+		<ul id="list">
+			<!--<li>
+				<input class="check" type="checkbox" />
+				<img src="images/1.jpg" />
+				<span>单车</span>
+				<span>$1000</span>
+				<input class="sub" type="button" value="-" />
+				<input class="num" type="text" value="1" />
+				<input class="add" type="button" value="+" />
+				<a class="delete" href="javascript:;">删除</a>
+			</li>
+			-->
+		</ul>
+		<a id="deleteSelect" href="javascript:;">删除选中</a>
+		<p>总价： <span id="totalPrice">0</span></p>
+	</body>
+</html>

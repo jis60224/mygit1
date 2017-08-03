@@ -1,0 +1,158 @@
+[
+ 	[
+	 	 {
+	 		"id":101,
+	 		"img":"resource/yundong/yd4.jpg",
+	 		"brand":"adidas/阿迪达斯",
+	 		"name":"男式时尚舒适短袖T恤",
+	 		"unite":"￥",
+	 		"price":"139.00"
+	 	},
+	 	{
+	 		"id":102,
+	 		"img":"resource/yundong/yd5.jpg",
+	 		"brand":"adidas/阿迪达斯",
+	 		"name":"男款logo潮流运动短袖",
+	 		"unite":"￥",
+	 		"price":"149.00",
+	 		'imgArr':[1,2,3,]
+	 	},
+	 	{
+	 		"id":103,
+	 		"img":"resource/yundong/yd6.jpg",
+	 		"brand":"安踏",
+	 		"name":"男款logo潮流运动短袖",
+	 		"unite":"￥",
+	 		"price":"79.00"
+	 	},
+	 	{
+	 		"id":104,
+	 		"img":"resource/yundong/yd7.jpg",
+	 		"brand":"Xtep特步",
+	 		"name":"女子透气轻便多彩T恤",
+	 		"unite":"￥",
+	 		"price":"59.00"
+	 	},
+	 	{
+	 		"id":105,
+	 		"img":"resource/yundong/yd8.jpg",
+	 		"brand":"361°",
+	 		"name":"男式减震透气轻便椰子鞋",
+	 		"unite":"￥",
+	 		"price":"179.00"
+	 	},
+	 	{
+	 		"id":106,
+	 		"img":"resource/yundong/yd9.jpg",
+	 		"brand":"361°",
+	 		"name":"女式减震透气时尚椰子鞋",
+	 		"unite":"￥",
+	 		"price":"169.00"
+	 	},
+	 	{
+	 		"id":107,
+	 		"img":"resource/yundong/yd10.jpg",
+	 		"brand":"Xtep特步",
+	 		"name":"男款简约舒适系带小白鞋",
+	 		"unite":"￥",
+	 		"price":"199.00"
+	 	},
+	 	{
+	 		"id":108,
+	 		"img":"resource/yundong/yd11.jpg",
+	 		"brand":"安踏",
+	 		"name":"男士百搭时尚休闲小白鞋",
+	 		"unite":"￥",
+	 		"price":"159.00"
+	 		
+	 	}
+ 	],
+ 	
+ 	[
+ 	 {
+ 		"id":109,
+ 		"img":"resource/nvzhuang/nv4.jpg",
+ 		"brand":"韩都衣舍HSTYLE",
+ 		"name":"拼接喇叭袖雪纺衫",
+ 		"unite":"￥",
+ 		"price":"108.00"
+ 	},
+ 	{
+ 		"id":110,
+ 		"img":"resource/nvzhuang/nv5.jpg",
+ 		"brand":"V领民族风印花T恤",
+ 		"name":"男款logo潮流运动短袖",
+ 		"unite":"￥",
+ 		"price":"159.00"
+ 	},
+ 	{
+ 		"id":111,
+ 		"img":"resource/nvzhuang/nv6.jpg",
+ 		"brand":"OTHERMIX七格格",
+ 		"name":"字母印花开叉袖T恤",
+ 		"unite":"￥",
+ 		"price":"89.00"
+ 	},
+ 	{
+ 		"id":112,
+ 		"img":"resource/nvzhuang/nv7.jpg",
+ 		"brand":"茵曼",
+ 		"name":"条纹印花百搭短袖T恤",
+ 		"unite":"￥",
+ 		"price":"69.00"
+ 	},
+ 	{
+ 		"id":113,
+ 		"img":"resource/yundong/yd8.jpg",
+ 		"brand":"OTHERMIX七格格",
+ 		"name":"不规则拼接系刺绣T恤",
+ 		"unite":"￥",
+ 		"price":"139.00"
+ 	},
+ 	{
+ 		"id":114,
+ 		"img":"resource/nvzhuang/nv9.jpg",
+ 		"brand":"韩都衣舍HSTYLE",
+ 		"name":"纯色减龄时尚套套装",
+ 		"unite":"￥",
+ 		"price":"98.00"
+ 	},
+ 	{
+ 		"id":115,
+ 		"img":"resource/nvzhuang/nv10.jpg",
+ 		"brand":"纯色减龄时尚套套装",
+ 		"name":"显瘦蕾丝短裙连衣裙",
+ 		"unite":"￥",
+ 		"price":"71.00"
+ 	},
+ 	{
+ 		"id":116,
+ 		"img":"resource/nvzhuang/nv11.jpg",
+ 		"brand":"妮维奥",
+ 		"name":"牛皮裙带牛仔裤带",
+ 		"unite":"￥",
+ 		"price":"89.00"
+ 	}
+	]
+ ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟商品列表</title>
+		<style>
+			* {margin: 0; padding: 0; border: none;}
+			ul, li{list-style: none;}
+			#list li {
+				width: 200px;
+				height: 250px;
+				border: 1px solid gray;
+				float: left;
+				margin: 10px;
+				cursor: pointer
+			}
+			#list li img {
+				width: 200px;
+				height: 100px;
+			}
+			.pox {
+				color: red;
+			}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script>
+			$(function(){
+				
+				
+				var arr = [];
+				
+				//先获取数据
+				$.get("resource/json/goods1.json", function(d){
+					
+					//console.log(d);
+					arr = d;
+					
+					for (var i=0; i<arr.length; i++) {
+						var obj = arr[i];
+						
+						var li = $("<li></li>").appendTo("#list");
+						$("<img src="+ obj.img +">").appendTo(li);
+						$("<p>"+ obj.name +"</p>").appendTo(li);
+						$("<p class='pox'>"+ obj.unite + obj.price +"</p>").appendTo(li);
+						//var p = $("<p>剩余: <span>00</span>天 <span>00</span>:<span>00</span>:<span>00</span></p>").appendTo(li);
+						$("<a class='addToCart' href='javascript:;'>加入购物车</a>").appendTo(li);
+						
+						//活动结束时间
+						/*var endTime = obj.endTime;
+						
+						(function(p, endTime){
+							
+							var timer = setInterval(function(){
+								var d1 = new Date(endTime); //活动结束时间
+								var d2 = new Date(); //当前时间
+								var timeInterval = parseInt( (d1-d2)/1000 ); //相差的总秒数
+								//console.log(timeInterval);
+								
+								//活动结束
+								if (timeInterval <= 0) {
+									alert("活动结束");
+									clearInterval(timer); //关闭定时器
+									return;
+								}
+								
+								var day = parseInt(timeInterval/(3600*24)); //天
+								var hour = parseInt(timeInterval/3600) % 24; //时
+								var min = parseInt(timeInterval/60) % 60; //分
+								var sec = timeInterval % 60; //秒
+								
+								day = day>=10 ? day : '0'+day;
+								hour = hour>=10 ? hour : '0'+hour;
+								min = min>=10 ? min : '0'+min;
+								sec = sec>=10 ? sec : '0'+sec;
+								
+								p.find("span").eq(0).html( day );
+								p.find("span").eq(1).html( hour );
+								p.find("span").eq(2).html( min );
+								p.find("span").eq(3).html( sec );
+								
+							}, 1000);
+							
+						})(p, endTime)*/
+					}
+					
+				})
+				
+				
+				/*//加入购物车
+				$("#list").on("click", ".addToCart", function(){
+					//console.log("加入购物车");
+					
+					//点击的商品下标
+					var index = $(this).index("#list .addToCart");
+					//console.log(index);
+					
+					//点击的商品
+					var obj = arr[index];
+					
+					//将当前的商品对象加入cookie购物车
+					var goodsArr = $.cookie("cart") ? JSON.parse($.cookie("cart")) : [];
+					var isExist = false; //默认cookie中不存在和我当前点击的相同商品
+					for (var i=0; i<goodsArr.length; i++) {
+						if (goodsArr[i].id == obj.id) {
+							goodsArr[i].num++; //数量加1
+							isExist = true; //说明存在相同的
+						}
+					}
+					if (isExist == false){
+						obj.num = 1; 
+						obj.checked = true; //默认是选中的
+						goodsArr.push(obj);
+					}
+					
+					$.cookie("cart", JSON.stringify(goodsArr), {expires:30, path:"/"});
+					console.log( $.cookie("cart") );
+					
+				})*/
+				//点击加入购物车
+				$('#list').on('click','.addToCart',function(){
+					
+					var index = $(this).index('#list .addToCart');
+					//console.log(index);
+					var obj = arr[index];
+					//console.log(obj)
+					var goodsArr = $.cookie('cart') ? JSON.parse($.cookie('cart')) : [];
+					var isExist = false;
+					for(var i in goodsArr){
+						if(obj.id == goodsArr[i].id){
+							goodsArr[i].num++;
+							isExist = true;
+						}
+					}
+					if(isExist == false){
+						obj.num = 1;
+						obj.checked = true;
+						goodsArr.push(obj);
+					}
+					$.cookie('cart',JSON.stringify(goodsArr),{expires:10,path:'/'});
+					console.log($.cookie('cart'));
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<a href="cart/mycart.html" target="_blank">结算</a>
+		<ul id="list">
+			
+		</ul>
+	</body>
+</html>
