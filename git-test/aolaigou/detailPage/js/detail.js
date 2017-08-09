@@ -14,7 +14,7 @@ $(function() {
 	$.get('../resource/json/goods1.json', function(d) {
 		//console.log(d)
 		var arr = d;
-		console.log(arr)
+		//console.log(arr)
 		for(var i in arr) {
 			var obj = arr[i];
 			if(obj.id == id) {
@@ -26,8 +26,14 @@ $(function() {
 	//渲染页面
 	function fn2(obj) {
 		//创建节点
+		//console.log(obj.xImgArr)
+		//小轮播图片
+		for(var i=0;i<obj.xImgArr.length;i++){
+			$(`<li><img src="${obj.xImgArr[i]}"></li>`).appendTo($('.lb-list'))
+		}
 		//图片
-		$('.smallImg').append($(`<img src="${obj.img}"/>`));
+		$('.smallImg img').attr('src',obj.zImg);
+		$('.bigImg').attr('src', obj.dImg);
 		//名称
 		$('.goods-name').html($(`<span class="pinpai">${obj.brand}</span>
 					<span class="name">${obj.name}</span>
@@ -39,7 +45,7 @@ $(function() {
 		//加入购物车插件 飞进
 		$('.cart-btn').click(function() {
 			//点击创建一个运动的节点
-			var flyer = $(`<img src="${obj.img}" style="width: 200px;height: 200px;"/>`)
+			var flyer = $(`<img src="${obj.zImg}" style="width: 200px;height: 200px;"/>`)
 			flyer.fly({
 				start: {
 					left: $('.img').offset().left,
@@ -85,8 +91,11 @@ $(function() {
 
 			reflesh()
 		})
-
+		
+		//放大镜
+		zoom(obj)
 	}
+	
 	//购物车小点出现
 	if($.cookie('cart')) {
 		var str = 0;
@@ -94,6 +103,8 @@ $(function() {
 			str += JSON.parse($.cookie('cart'))[i].num
 		}
 		$('#cart-num').show().val(str);
+	}else{
+		console.log('空')
 	}
 
 	//购物车跳转
@@ -132,7 +143,7 @@ $(function() {
 					} else {
 						$("<input class='check' type='checkbox' />").appendTo(li);
 					}
-					$("<img class='g-img' src=" + obj.img + " />").appendTo(li);
+					$("<img class='g-img' src=" + obj.zImg + " />").appendTo(li);
 					$(`<div class="g-txt">
 							<p>
 								<span>${obj.brang}</span>
@@ -166,6 +177,7 @@ $(function() {
 		var index = $(this).index('.g-list li');
 		//console.log(index)
 		var arr = JSON.parse($.cookie('cart'));
+		console.log(arr)
 		arr[index].checked = !arr[index].checked;
 		$.cookie('cart',JSON.stringify(arr),{expires:10,path:'/'});
 		isAllCheck();
@@ -191,7 +203,7 @@ $(function() {
 	isAllCheck();
 	function isAllCheck(){
 		var sum = 0;
-		var arr = JSON.parse($.cookie('cart'));
+		var arr = $.cookie('cart') ? JSON.parse($.cookie('cart')) : [];
 		for(var i in arr){
 			sum+=arr[i].checked;
 		}
@@ -216,13 +228,15 @@ $(function() {
 	}
 
 	//放大镜
+	function zoom(obj){
+		console.log(obj)
 	$('.lb-list').on('mouseenter', 'li', function() {
 		console.log(($(this).index() + 1))
 		$(this).css({
 			border: '1px solid red'
 		});
-		$('.smallImg').find('img').attr('src', 'resource/lunbo/b-l' + ($(this).index() + 1) + '.JPG');
-		$('.bigImg').attr('src', 'resource/lunbo/bb-l' + ($(this).index() + 1) + '.JPG')
+		$('.smallImg').find('img').attr('src', obj.zImgArr[$(this).index()]);
+		$('.bigImg').attr('src', obj.dImgArr[$(this).index()]);
 	});
 	$('.lb-list').on('mouseleave', 'li', function() {
 		$(this).css({
@@ -271,6 +285,7 @@ $(function() {
 			top: -scale * y
 		});
 	})
+}
 
 	//移除小图
 	$(".smallImg").mouseleave(function() {

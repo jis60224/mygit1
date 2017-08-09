@@ -8,9 +8,113 @@ html {
 #right-guaid{
 	position: fixed;
 	top:5px;
-	right: 0;
+	right: -330px;
 	z-index: 4;
+	width: 380px;
+	height: 600px;
+	/*background: rgba(255,255,255,0.3);*/
 }
+
+.g-right{
+	width: 330px;
+	height: 600px;
+	position: absolute;
+	right: 0;
+	border: 1px solid #EBEBEB;
+	box-sizing: border-box;
+	/*background: url(../resource/img/emty-cart.png);*/
+}
+.g-header{
+	height: 50px;
+	border-bottom:1px solid #EBEBEB ;
+}
+.g-header .allCheck{
+	margin: 20px;
+}
+.g-header span{
+	margin-left: 70px;
+	font-size: 16px;
+}
+.g-header .close-btn{
+	float: right;
+	width: 40px;
+	height: 50px;
+	richness: 10px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	color: #EBEBEB;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+/**/
+.g-list{
+	width: 330px;
+	height: 500px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.g-list li{
+	overflow: hidden;
+	width: 330px;
+	height: 100px;
+	border-bottom: 1px solid #EBEBEB;
+}
+.g-list li input{
+	float: left;
+	margin: 40px 20px;
+}
+.g-list li .g-img{
+	width: 90px;
+	height: 100px;
+	padding-right: 10px;
+}
+.g-list li .g-txt{
+	float: right;
+	width: 175px;
+	height: 100px;
+}
+.g-txt p{
+	margin-top:15px ;
+}
+.g-txt p:nth-of-type(1){
+	font-size: 14px;
+}
+.g-txt p:nth-of-type(2) span:nth-of-type(1){
+	font-size: 14px;
+	color: red;
+}
+.g-right .pay{
+	position: absolute;
+	bottom: 0;
+	width: 330px;
+	height: 70px;
+	border-top: 1px solid #EBEBEB;
+	background: #fff;
+}
+.pay .choose p{
+	width: 40%;
+	box-sizing: border-box;
+	padding-left: 30px;
+	display: inline-block;
+}
+
+.pay .pay-btn{
+	margin-top: 10px;
+	width: 60%;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	background: red;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+}
+
 .guaid-list{
 	width: 50px;
 	height: 364px;
@@ -634,57 +738,77 @@ html {
 	height: 350px;
 	margin: 0 auto;
 }
-.jx li{
-	float: left;
-	width: 232px;
+.da-thumbs {
+	list-style: none;
+	width: 1200px;
 	height: 350px;
 	position: relative;
-	margin-left: 10px;
+	margin: 20px auto;
+	padding: 0;
 }
-.jx li:nth-child(1){
-	margin-left: 0;
+.da-thumbs li {
+	float: left;
+	margin-left: 8px;
+	background: #fff;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.jx li a{
+.da-thumbs li a,
+.da-thumbs li a img {
 	display: block;
-	width: 232px;
-	height: 350px;
+	position: relative;
 }
-.jx .jx-logo img{
+.da-thumbs li a {
+	overflow: hidden;
+}
+.da-thumbs li a div {
 	position: absolute;
-	left: 56px;
-	bottom: 30px;
-	width: 120px;
-	height: 70px;
-	border-radius: 5px;
+	background: rgba(75,75,75,0.7);
+	width: 100%;
+	height: 100%;
 }
-.jx li .shadow{
-	width: 232px;
-	height: 350px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 9;
-	background: rgba(0,0,0,0.5);
-	display: none;
+.da-thumbs li a div.da-animate {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
-.jx li .shadow h1{
-	width: 232px;
-	height: 40px;
-	font-size: 36px;
-	line-height: 40px;
-	text-align: center;
+/* Initial state classes: */
+.da-slideFromTop {
+	left: 0px;
+	top: -100%;
+}
+.da-slideFromBottom {
+	left: 0px;
+	top: 100%;
+}
+.da-slideFromLeft {
+	top: 0px; 
+	left: -100%;
+}
+.da-slideFromRight {
+	top: 0px;
+	left: 100%;
+}
+/* Final state classes: */
+.da-slideTop {
+	top: 0px;
+}
+.da-slideLeft {
+	left: 0px;
+}
+.da-thumbs li a div span {
 	color: #fff;
-	margin-top: 132px;
-}
-.jx li .shadow span{
-	text-align: center;
-	font-size: 20px;
 	display: block;
-	width: 232px;
-	height: 30px;
-	line-height: 30px;
-	color: #fff;
+	text-align: center;
 }
+.da-thumbs li a div span>h1{
+	margin-top: 150px;
+	margin-bottom: 10px;
+}
+
+
 /*国际奢品*/
 #box10{
 	width: 1200px;

@@ -1,8 +1,22 @@
 
 
+define(['jquery'],function(){
+	
 
 
 $(function() {
+	//侧边栏
+	/*$('.guaid-list li').eq(1).click(function() {
+		$('#right-guaid').animate({
+			right: 0
+		})
+		//open('../cart/mycart.html','black');
+	});
+	$('.close-btn').click(function() {
+		$('#right-guaid').animate({
+			right: -330
+		})
+	})*/
 	
 	//$('* a').removeAttr('href').css('cursor','pointer');
 	
@@ -257,11 +271,16 @@ $(function() {
 	}, 1000);
 
 	//阴影飞进
-	$('.jx').on('mouseenter mouseleave', 'li', function(e) {
+	/*$('.jx').on('mouseenter mouseleave', 'li', function(e) {
 
 		$(this).find('.shadow').slideToggle();
 		console.log(11)
-	})
+	})*/
+	
+			
+	$('#da-thumbs > li').hoverdir();
+
+			
 	/*$('.jx').on('mouseleave','li',function(e){
 		//增加节点
 		$(this).find('.shadow').remove();
@@ -367,4 +386,6 @@ $(function() {
 	})
 	
 	
+})
+
 })

@@ -6,10 +6,13 @@
 		<title>首页</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script src="js/jquery.js"></script>
-		<script src="js/main.js"></script>
+		<!--<script src="js/jquery.js"></script>
+		<script src="js/jquery.hoverdir.js"></script>>
+		<script src="js/main.js"></script>-->
+		<script src="js/require.js" async="true" defer data-main="js/main111"></script>
+		<!--<script src="js/main111.js"></script>-->
 	</head>
-
+		
 	<body>
 		<!--右边导航-->
 		<div id="right-guaid">
@@ -36,6 +39,41 @@
 					<div class="hide-txt">返回顶部</div>
 				</li>
 			</ul>
+			<!--购物车-->
+			<div class="g-right">
+				<div class="g-header">
+					<input class="allCheck" type="checkbox" />
+					<span>全选</span>
+					<input class="close-btn" type="button" value="x" />
+				</div>
+				<!--goods-->
+				<ul class="g-list">
+					<!--<li>
+						<input type="checkbox" checked="true" />
+						<img class="g-img" src="resource/yundong/yd5.jpg"/>
+						<div class="g-txt">
+							<p>
+								<span>adidas/阿迪达斯</span>
+								<span>男式时尚舒适短袖T恤</span>
+								<span>101</span>
+							</p>
+							<p>
+								<span>￥69.00</span>
+								<span>*2</span>
+							</p>
+						</div>
+					</li>-->
+				</ul>
+				<div class="pay">
+					<div class="choose">
+						<p><span>已选：</span><span class="gs-count">0</span><span>件</span></p>
+						<p><span>合计：</span><span>￥</span><span id="totalPrice">00.00</span></p>
+					</div>
+					<div class="pay-btn">
+						去购物车中结算
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--吸顶-->
 		<div id="topFix">
@@ -1111,47 +1149,27 @@
 			<span>Brand Wew</span>
 		</div>
 		<div id="box8">
-			<ul class="jx">
-				<li>
-					<a href="#"><img src="resource/jingxuan/jx.jpg" /></a>
-					<div class="jx-logo"><img src="resource/jingxuan/jx-1.jpg" /></div>
-					<div class="shadow">
-						<h1>劲霸</h1>
-						<span>低至三折</span>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="resource/jingxuan/jx2.jpg" /></a>
-					<div class="jx-logo"><img src="resource/jingxuan/jx-2.jpg" /></div>
-					<div class="shadow">
-						<h1>格诺瑞丝</h1>
-						<span>满299减100</span>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="resource/jingxuan/jx3.jpg" /></a>
-					<div class="jx-logo"><img src="resource/jingxuan/jx-3.jpg" /></div>
-					<div class="shadow">
-						<h1>小猪班尼</h1>
-						<span>满299减100</span>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="resource/jingxuan/jx4.jpg" /></a>
-					<div class="jx-logo"><img src="resource/jingxuan/jx-4.jpg" /></div>
-					<div class="shadow">
-						<h1>隆斯戴尔</h1>
-						<span>低至四折</span>
-					</div>
-				</li>
-				<li>
-					<a href="#"><img src="resource/jingxuan/jx5.jpg" /></a>
-					<div class="jx-logo"><img src="resource/jingxuan/jx-5.jpg" /></div>
-					<div class="shadow">
-						<h1>卓诗尼</h1>
-						<span>低至三折</span>
-					</div>
-				</li>
+			<ul id="da-thumbs" class="da-thumbs">
+				<li> <a href="javascript:;"> <img src="resource/jingxuan/jx.jpg" />
+		        	<div><span><h1>劲霸</h1>
+							<span>低至三折</span></span></div>
+		        	</a> </li>
+		      	<li> <a href="javascript:;"> <img src="resource/jingxuan/jx2.jpg" />
+		        	<div><span><h1>格诺瑞丝</h1>
+						<span>满299减100</span></span></div>
+		        	</a> </li>
+		      	<li> <a href="javascript:;"> <img src="resource/jingxuan/jx3.jpg" />
+		        	<div><span><h1>小猪班尼</h1>
+						<span>满299减100</span></span></div>
+		        	</a> </li>
+		      	<li> <a href="javascript:;"> <img src="resource/jingxuan/jx4.jpg" />
+		        	<div><span><h1>隆斯戴尔</h1>
+						<span>低至四折</span></span></div>
+		        	</a> </li>
+		      	<li> <a href="javascript:;"> <img src="resource/jingxuan/jx5.jpg" />
+		       	 	<div><span><h1>卓诗尼</h1>
+						<span>低至三折</span></span></div>
+		        	</a> </li>
 			</ul>
 		</div>
 		<!--国际奢品-->

@@ -5,6 +5,9 @@
  * Copyright 2013 Klaus Hartl
  * Released under the MIT license
  */
+define(['jquery'],function(){
+	
+
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD
@@ -115,3 +118,4 @@
 	};
 
 }));
+})

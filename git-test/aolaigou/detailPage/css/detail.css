@@ -422,6 +422,7 @@ html {
 	width: 62px;
 	height: 62px;
 	margin-bottom: 10px;
+	box-sizing: border-box;
 }
 .lb-list li img{
 	width: 60px;
@@ -438,6 +439,8 @@ html {
 	height: 400px;
 }
 .smallArea{
+	border:1px solid #ccc;
+	box-sizing: border-box;
 	width: 100px;
 	height: 100px;
 	background: rgba(252,255,255,0.3);

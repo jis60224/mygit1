@@ -1,6 +1,9 @@
 
 
 $(function(){
+	
+		
+	
 	//注册验证
 	var flag1 = false,flag2 = false,flag3 = false,flag4 = false,flag5 = false,flag6= false;
 	
@@ -49,20 +52,12 @@ $(function(){
 	//验证码
 	$('.code-num').click(function(){
 		$(this).val(randomCode());
+		reflesh();
 	})
 	
 	$('.code').on('focus keyup',function(){
-		$('.code-tips').html('请输入验证码');
-		if($(this).val() == $('.code-num').val()){
-			$(this).blur(function(){
-			$('.code-tips').html('');
-			flag4 =true;
-		})
-		}else{
-			$(this).blur(function(){
-			$('.code-tips').html('请输入正确的验证码');
-		})
-		}
+		reflesh();
+		
 	})
 	//短信验证
 	$('.msg-code').click(function(){
@@ -99,7 +94,10 @@ $(function(){
 					console.log(data);
 					console.log(JSON.parse(data).status);
 					if(JSON.parse(data).status == 1){
-						open('../../aolaigou/login/login.html')
+						alert(JSON.parse(data).msg)
+						open('../../aolaigou/login/login.html','parent')
+					}else{
+						alert(JSON.parse(data).msg)
 					}
 					
 				}
@@ -108,6 +106,22 @@ $(function(){
 	})
 	
 	
+	
+	function reflesh(){
+		$('.code-tips').html('请输入验证码');
+		if($('.code').val() == $('.code-num').val()){
+			
+			$('.code').blur(function(){
+			$('.code-tips').html('');
+			flag4 =true;
+		})
+		}else{
+			flag4 = false;
+			$('.code').blur(function(){
+			$('.code-tips').html('请输入正确的验证码');
+		})
+		}
+		}
 	
 	//console.log(String.fromCharCode(Math.random()<0.5 ? ((Math.random()*26)+65) : ((Math.random()*26)+97) ))
 	//随机数字和字母

@@ -5,7 +5,12 @@
 		"brand":"adidas/阿迪达斯",
 		"name":"男式时尚舒适短袖T恤",
 		"unite":"￥",
-		"price":"139.00"
+		"price":"139.00",
+		"zImg":"resource/index-img/yi1/yi1-z.jpg",
+		"dImg":"resource/index-img/yi1/yi1-d.jpg",
+		"xImgArr":["resource/index-img/yi1/yi1-x.jpg","resource/index-img/yi1/yi2-x.jpg","resource/index-img/yi1/yi3-x.jpg","resource/index-img/yi1/yi4-x.jpg"],
+		"zImgArr":["resource/index-img/yi1/yi1-z.jpg","resource/index-img/yi1/yi2-z.jpg","resource/index-img/yi1/yi3-z.jpg","resource/index-img/yi1/yi4-z.jpg"],
+		"dImgArr":["resource/index-img/yi1/yi1-d.jpg","resource/index-img/yi1/yi2-d.jpg","resource/index-img/yi1/yi3-d.jpg","resource/index-img/yi1/yi4-d.jpg"]
 	},
 	{
 		"id":102,
@@ -14,7 +19,11 @@
 		"name":"男款logo潮流运动短袖",
 		"unite":"￥",
 		"price":"149.00",
-		"imgArr":["","",""]
+		"zImg":"resource/index-img/yi2/yi21-z.jpg",
+		"dImg":"resource/index-img/yi2/yi21-d.jpg",
+		"xImgArr":["resource/index-img/yi2/yi21-x.jpg","resource/index-img/yi2/yi22-x.jpg","resource/index-img/yi2/yi23-x.jpg","resource/index-img/yi2/yi24-x.jpg"],
+		"zImgArr":["resource/index-img/yi2/yi21-z.jpg","resource/index-img/yi2/yi22-z.jpg","resource/index-img/yi2/yi23-z.jpg","resource/index-img/yi2/yi24-z.jpg"],
+		"dImgArr":["resource/index-img/yi2/yi21-d.jpg","resource/index-img/yi2/yi22-d.jpg","resource/index-img/yi2/yi23-d.jpg","resource/index-img/yi2/yi24-d.jpg"]
 	},
 	{
 		"id":103,
@@ -22,7 +31,12 @@
 		"brand":"安踏",
 		"name":"男款logo潮流运动短袖",
 		"unite":"￥",
-		"price":"79.00"
+		"price":"79.00",
+		"zImg":"resource/index-img/yi3/yi31-z.jpg",
+		"dImg":"resource/index-img/yi3/yi31-d.jpg",
+		"xImgArr":["resource/index-img/yi3/yi31-x.jpg","resource/index-img/yi3/yi32-x.jpg","resource/index-img/yi3/yi33-x.jpg","resource/index-img/yi3/yi34-x.jpg"],
+		"zImgArr":["resource/index-img/yi3/yi31-z.jpg","resource/index-img/yi3/yi32-z.jpg","resource/index-img/yi3/yi33-z.jpg","resource/index-img/yi3/yi34-z.jpg"],
+		"dImgArr":["resource/index-img/yi3/yi31-d.jpg","resource/index-img/yi3/yi32-d.jpg","resource/index-img/yi3/yi33-d.jpg","resource/index-img/yi3/yi34-d.jpg"]
 	},
 	{
 		"id":104,
@@ -30,7 +44,12 @@
 		"brand":"Xtep特步",
 		"name":"女子透气轻便多彩T恤",
 		"unite":"￥",
-		"price":"59.00"
+		"price":"59.00",
+		"zImg":"resource/index-img/yi4/yi41-z.jpg",
+		"dImg":"resource/index-img/yi4/yi41-d.jpg",
+		"xImgArr":["resource/index-img/yi4/yi41-x.jpg","resource/index-img/yi4/yi42-x.jpg","resource/index-img/yi4/yi43-x.jpg","resource/index-img/yi4/yi44-x.jpg","resource/index-img/yi4/yi45-x.jpg"],
+		"zImgArr":["resource/index-img/yi4/yi41-z.jpg","resource/index-img/yi4/yi42-z.jpg","resource/index-img/yi4/yi43-z.jpg","resource/index-img/yi4/yi44-z.jpg","resource/index-img/yi4/yi45-z.jpg"],
+		"dImgArr":["resource/index-img/yi4/yi41-d.jpg","resource/index-img/yi4/yi42-d.jpg","resource/index-img/yi4/yi43-d.jpg","resource/index-img/yi4/yi44-d.jpg","resource/index-img/yi4/yi45-d.jpg"]
 	},
 	{
 		"id":105,
@@ -38,7 +57,12 @@
 		"brand":"361°",
 		"name":"男式减震透气轻便椰子鞋",
 		"unite":"￥",
-		"price":"179.00"
+		"price":"179.00",
+		"zImg":"resource/index-img/xie1/xie1-z.jpg",
+		"dImg":"resource/index-img/xie1/xie1-d.jpg",
+		"xImgArr":["resource/index-img/xie1/xie1-x.jpg","resource/index-img/xie1/xie2-x.jpg","resource/index-img/xie1/xie3-x.jpg","resource/index-img/xie1/xie4-x.jpg","resource/index-img/xie1/xie5-x.jpg"],
+		"zImgArr":["resource/index-img/xie1/xie1-z.jpg","resource/index-img/xie1/xie2-z.jpg","resource/index-img/xie1/xie3-z.jpg","resource/index-img/xie1/xie4-z.jpg","resource/index-img/xie1/xie5-z.jpg"],
+		"dImgArr":["resource/index-img/xie1/xie1-d.jpg","resource/index-img/xie1/xie2-d.jpg","resource/index-img/xie1/xie3-d.jpg","resource/index-img/xie1/xie4-d.jpg","resource/index-img/xie1/xie5-d.jpg"]
 	},
 	{
  		"id":106,
@@ -46,7 +70,12 @@
  		"brand":"361°",
  		"name":"女式减震透气时尚椰子鞋",
  		"unite":"￥",
- 		"price":"169.00"
+ 		"price":"169.00",
+ 		"zImg":"resource/index-img/xie2/xie21-z.jpg",
+		"dImg":"resource/index-img/xie2/xie21-d.jpg",
+		"xImgArr":["resource/index-img/xie2/xie21-x.jpg","resource/index-img/xie2/xie22-x.jpg","resource/index-img/xie2/xie23-x.jpg","resource/index-img/xie2/xie24-x.jpg","resource/index-img/xie2/xie25-x.jpg"],
+		"zImgArr":["resource/index-img/xie2/xie21-z.jpg","resource/index-img/xie2/xie22-z.jpg","resource/index-img/xie2/xie23-z.jpg","resource/index-img/xie2/xie24-z.jpg","resource/index-img/xie2/xie25-z.jpg"],
+		"dImgArr":["resource/index-img/xie2/xie21-d.jpg","resource/index-img/xie2/xie22-d.jpg","resource/index-img/xie2/xie23-d.jpg","resource/index-img/xie2/xie24-d.jpg","resource/index-img/xie2/xie25-d.jpg"]
  	},
  	{
  		"id":107,
@@ -54,7 +83,12 @@
  		"brand":"Xtep特步",
  		"name":"男款简约舒适系带小白鞋",
  		"unite":"￥",
- 		"price":"199.00"
+ 		"price":"199.00",
+ 		"zImg":"resource/index-img/xie3/xie31-z.jpg",
+		"dImg":"resource/index-img/xie3/xie31-d.jpg",
+		"xImgArr":["resource/index-img/xie3/xie31-x.jpg","resource/index-img/xie3/xie32-x.jpg","resource/index-img/xie3/xie33-x.jpg","resource/index-img/xie3/xie34-x.jpg","resource/index-img/xie3/xie35-x.jpg"],
+		"zImgArr":["resource/index-img/xie3/xie31-z.jpg","resource/index-img/xie3/xie32-z.jpg","resource/index-img/xie3/xie33-z.jpg","resource/index-img/xie3/xie34-z.jpg","resource/index-img/xie3/xie35-z.jpg"],
+		"dImgArr":["resource/index-img/xie3/xie31-d.jpg","resource/index-img/xie3/xie32-d.jpg","resource/index-img/xie3/xie33-d.jpg","resource/index-img/xie3/xie34-d.jpg","resource/index-img/xie3/xie35-d.jpg"]
  	},
  	{
  		"id":108,
@@ -62,6 +96,11 @@
  		"brand":"安踏",
  		"name":"男士百搭时尚休闲小白鞋",
  		"unite":"￥",
- 		"price":"159.00"
+ 		"price":"159.00",
+ 		"zImg":"resource/index-img/xie4/xie41-z.jpg",
+		"dImg":"resource/index-img/xie4/xie41-d.jpg",
+		"xImgArr":["resource/index-img/xie4/xie41-x.jpg","resource/index-img/xie4/xie42-x.jpg","resource/index-img/xie4/xie43-x.jpg","resource/index-img/xie4/xie44-x.jpg","resource/index-img/xie4/xie45-x.jpg"],
+		"zImgArr":["resource/index-img/xie4/xie41-z.jpg","resource/index-img/xie4/xie42-z.jpg","resource/index-img/xie4/xie43-z.jpg","resource/index-img/xie4/xie44-z.jpg","resource/index-img/xie4/xie45-z.jpg"],
+		"dImgArr":["resource/index-img/xie4/xie41-d.jpg","resource/index-img/xie4/xie42-d.jpg","resource/index-img/xie4/xie43-d.jpg","resource/index-img/xie4/xie44-d.jpg","resource/index-img/xie4/xie45-d.jpg"]
  	}
  ]
